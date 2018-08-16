@@ -66,20 +66,20 @@ app.use( function(req, res, next) {
  * Exportams todas las rutas dentro del index.js
  */
 
-const admin = require('./components/admin/admin.route');
+// const admin = require('./components/admin/admin.route');
 const cliente = require('./components/cliente/cliente.route');
-const hotel = require('./components/hotel/hotel.route');
-const inicio_sesion = require('./components/inicio_sesion/inicio_sesion.route');
+// const hotel = require('./components/hotel/hotel.route');
+// const inicio_sesion = require('./components/inicio_sesion/inicio_sesion.route');
 
 
 /**
  * Le indicamos que le de acceso externo a las rutas inicializadas
  */
 
-app.use('/api', admin);
+// app.use('/api', admin);
 app.use('/api', cliente);
-app.use('/api', hotel);
-app.use('/api', inicio_sesion);
+// app.use('/api', hotel);
+// app.use('/api', inicio_sesion);
 
 
 // Se guarda todo lo que se ha realizado

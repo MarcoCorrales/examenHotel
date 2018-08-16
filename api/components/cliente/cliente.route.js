@@ -5,6 +5,10 @@ const router = express.Router();
 const cliente = require('./cliente.api');
 
 
+// app.use(app.router);
+// routes.initialize(app);
+
+
 router.route('/registrar_cliente')
     .post(function (req, res) {
         cliente.registrar(req, res);
