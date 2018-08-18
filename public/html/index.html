@@ -24,7 +24,26 @@
     </audio>
 
     <header id="page-header">
-      <a href="" id="toggle-nav" class="header-button"><span class="hamburger"><span class="base"></span></span><span class="label">  <i class="fas fa-bars"></i> Menu</span></a>
+        <!-- /* * * * * * * * * * * * * inicio: menu dinamico retractil * * * * * * * * * *  */ -->
+        <a href="" id="toggle-nav" class="header-button"><span class="label"></i> Menu</span></a>
+        <body class="page-home">
+            <div class="menuCont">
+                <input type="checkbox" id="check" onclick="">
+                <label for="check" id="icone"><i class="fas fa-bars"></i>
+                </label>
+      
+                <div class="bars">
+                  <nav>
+                    <a href="#" id="btnEstudiantes" class=""><div class="link">Registrar Cliente</div></a>
+          
+                    <a href="#" id="btnEstudiantes" class=""><div class="link">Registrar Hotel</div></a>
+          
+                  </nav>
+                </div>
+              </div>
+   <!-- /* * * * * * * * * * * * * fin: menu dinamico retractil * * * * * * * * * *  */ -->
+  
+  
 
         <a id="btn_login" class="header-button header-button-hidden no-address" data-remote="true" href="#">Login</a>
         <a id="btn_register" class="header-button header-button-last header-button-hidden no-address" data-remote="true" href="#">Register</a>
@@ -48,7 +67,7 @@
           <!-- <hr> -->
         <!-- </section> -->
 
-        <section id="section_login">
+        <section id="section_login" class="ocultar">
             <h2>Inicie su sesión</h2>
             <hr>
             <form action="">
@@ -67,7 +86,7 @@
               </form>
         </section>
         
-          <section id="section_cliente_registro">
+          <section id="section_cliente_registro" class="ocultar">
               <h2>Regístrese</h2>
               <hr>
               

@@ -244,3 +244,75 @@ body {
     transition: all 700ms ease;
     padding: 0.7% 2%;
   }
+
+  /* * * * * * * * * * * * * inicio: menu dinamico retractil * * * * * * * * * *  */
+.menuCont{
+  /* background: #fff; */
+  top: 5.5%;
+  width: 14%;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 1;
+   opacity: .7;
+}
+
+#check{
+  display: none;
+}
+#icone, .icone{
+  position: absolute;
+  top: -3.9%;
+  width: 30%;
+  left: 16%;
+  cursor: pointer;
+  padding: 1%;
+  z-index: 1;
+} 
+.fa-bars{
+  font-size: 1.5em;
+  color: #fff;
+}
+.bars{
+  background-color: #f56504;
+  width: 82%;
+  height: 100%;
+  position: absolute;
+  /* top: 5.5%; */
+  transition: all .2s linear;
+  left: -300px;
+  /* -webkit-box-shadow: 5px 0px 3px 0px #00000087; */
+  /* -moz-box-shadow: 5px 0px 3px 0px #00000087; */
+  /* box-shadow: 5px 0px 3px 0px #00000087; */
+  z-index: 100;
+}
+nav{
+  width: 100%;
+  position: absolute;
+  top: 100px;
+} 
+nav a{
+  text-decoration: none;
+} 
+.link{
+  padding: 3.7% 14%;
+  font-family: 'Arial';
+  transition: all .2s linear;
+  color: #000;
+  opacity: 0;
+  margin-top: 200px;  
+}
+.link:hover{
+  border-bottom: 1px solid #fff;
+  color:#fff;
+} 
+
+#check:checked ~ .bars{
+  transform: translateX(300px);
+}
+#check:checked ~ .bars nav a .link{
+  opacity: 1;
+  margin-top: 0;
+  transition-delay: .2s;
+}
+/* * * * * * * * * * * * * fin: menu dinamico retractil * * * * * * * * * *  */

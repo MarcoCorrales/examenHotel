@@ -49,10 +49,14 @@ boton_cliente_registro.addEventListener('click',hide_section_cliente_registro);
 function show_section_login(){
 
   let contenedor = document.querySelector('#section_login');
+  let contenedor2 = document.querySelector('#section_cliente_registro');
+  
 
   if (contenedor != undefined) {
-      contenedor.classList.remove('ocultar');   
-    // boton_login.classList.add('ocultar'); 
+      contenedor.classList.remove('ocultar');
+      contenedor2.classList.add('ocultar');   
+      boton_login.classList.add('ocultar'); 
+      boton_register.classList.remove('ocultar'); 
   }
 }
 
@@ -62,17 +66,20 @@ function hide_section_login(){
 
   if (contenedor != undefined) {
       contenedor.classList.add('ocultar');
-    // boton_login.classList.remove('ocultar'); 
+      boton_login.classList.remove('ocultar'); 
   }
 }
 
 function show_section_cliente_registro(){
 
   let contenedor = document.querySelector('#section_cliente_registro');
+  let contenedor2 = document.querySelector('#section_login');
 
   if (contenedor != undefined) {
-      contenedor.classList.remove('ocultar');   
+      contenedor.classList.remove('ocultar');  
+      contenedor2.classList.add('ocultar'); 
       boton_register.classList.add('ocultar'); 
+      boton_login.classList.remove('ocultar'); 
   }
 }
 
