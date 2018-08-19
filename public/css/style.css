@@ -281,9 +281,7 @@ body {
   /* top: 5.5%; */
   transition: all .2s linear;
   left: -300px;
-  /* -webkit-box-shadow: 5px 0px 3px 0px #00000087; */
-  /* -moz-box-shadow: 5px 0px 3px 0px #00000087; */
-  /* box-shadow: 5px 0px 3px 0px #00000087; */
+  box-shadow: 0 5px 5px 3px #00000040;
   z-index: 100;
 }
 nav{
