@@ -19,9 +19,6 @@
 </head>
 
   <body class="page-home">
-    <audio id="music-song">
-      <source src="/music/15 slogans.mp3"/>
-    </audio>
 
     <header id="page-header">
         <!-- /* * * * * * * * * * * * * inicio: menu dinamico retractil * * * * * * * * * *  */ -->
@@ -89,8 +86,10 @@
           <section id="section_cliente_registro" class="ocultar">
               <h2>Regístrese</h2>
               <hr>
-              
+
                 <form action="">
+                      <button type="button" class="subirFoto" id="txt-foto_perfil_cliente"> Subir foto </button>
+                      <input type="hidden" id="inputFoto" value="">
                     <div class="field">
                         <input type="number" name="txt-identificacion_cliente" id="txt-identificacion_cliente" placeholder="Identificación">
                         <label for="txt-identificacion_cliente">Identificación</label>
@@ -113,7 +112,7 @@
                         <label for="txt-apellido2_cliente">Segundo apellido</label>
                       </div>
                       <div class="field">
-                          <input type="date" name="txt-fecha_nacimiento" id="txt-fecha_nacimiento" placeholder="Dirección">
+                          <input type="date" name="txt-fecha_nacimiento" id="txt-fecha_nacimiento" placeholder="Fecha de nacimiento">
                           <label for="txt-fecha_nacimiento">Fecha de nacimiento</label>
                         </div>
     
@@ -141,108 +140,63 @@
                       <input type="password" name="txt-contrasenna_confirmar" id="txt-contrasenna_confirmar" placeholder="Confirme su contraseña">
                       <label for="txt-contrasenna_confirmar">Confirme su contraseña</label>
                     </div>
-                    <button type="button" id="btn_cliente_registro">Registrar</button>
+                    <button type="button" id="btn_registrar_cliente">Registrar</button>
                   </form>
             </section>
 
             <section id="section_cliente_lista">
                 <h2>Lista de Clientes registrados</h2>
                 <hr>
-                  <p>A q u í    v a    l a   l i s t a   d e    C l i e n t e s.</p>
-           
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+                <table id="tbl_clientes">
+                  <thead class="encabezados">
+                    <th>Foto</th>
+                    <th>Identificación</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Foto</th>
+                    <th>Acciones</th>
+                   
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+
+
               </section>
 
 
             <section>
                 <h2>Titulo del Articulo</h2>
                 <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                 
               </section>
               <section>
                   <h2>Titulo del Articulo</h2>
                   <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
                 </section>
                 <section>
                     <h2>Titulo del Articulo</h2>
                     <hr>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      
                   </section>
       </div>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <!-- <script src="../../js/jquery-3.3.1.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
 
       <script src="../js/sistema/sistema.servicio.js"></script>
-		<script src="../js/sistema/sistema.cotrolador.js"></script>
+    <script src="../js/sistema/sistema.cotrolador.js"></script>
+
+    <script src="../js/cliente/cliente_servicio_registrar.js"></script>
+    <script src="../js/cliente/cliente_controlador_registrar.js"></script>
 
 
   </body>

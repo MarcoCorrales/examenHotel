@@ -18,7 +18,7 @@ boton_inicio_sesion.addEventListener('click',hide_section_login);
 let boton_register = document.querySelector('#btn_register');
 boton_register.addEventListener('click',show_section_cliente_registro);
 
-let boton_cliente_registro = document.querySelector('#btn_cliente_registro');
+let boton_cliente_registro = document.querySelector('#btn_registrar_cliente');
 boton_cliente_registro.addEventListener('click',hide_section_cliente_registro);
 
 // * * * * * * * * * * inicio: funciones de prueba * * * * * * * * * * * * *
@@ -88,7 +88,7 @@ function hide_section_cliente_registro(){
   let contenedor = document.querySelector('#section_cliente_registro');
 
   if (contenedor != undefined) {
-      contenedor.classList.add('ocultar');
+      // contenedor.classList.add('ocultar');      * * * lo desactive mientras pruebo el registro * * *
       boton_register.classList.remove('ocultar'); 
   }
 }
