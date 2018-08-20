@@ -88,7 +88,7 @@ function hide_section_cliente_registro(){
   let contenedor = document.querySelector('#section_cliente_registro');
 
   if (contenedor != undefined) {
-      // contenedor.classList.add('ocultar');      * * * lo desactive mientras pruebo el registro * * *
+      contenedor.classList.add('ocultar');      
       boton_register.classList.remove('ocultar'); 
   }
 }

@@ -40,7 +40,7 @@ module.exports.mostrar = function(req, res){
     });        
 
 };
-// * * * * *
+
 
 // module.exports.listar = function(req, res){
 //     cliente_Model.find().then(
@@ -88,7 +88,7 @@ module.exports.mostrar = function(req, res){
 //         // contrasenna : req.body.contrasenna,
 //         // contrasenna_confirmar : req.body.contrasenna_confirmar,
 //         // TipoUsuario: 3,
-        // foto : req.body.foto    
+//         foto : req.body.foto    
 //     },
 
 

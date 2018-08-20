@@ -21,16 +21,16 @@ router.route('/mostrar_cliente')
 
 
 
-// router.route('/listar__cliente')
-//     .get(function (req, res) {
-//         cliente.listar(req, res);
-//     });
+router.route('/listar__cliente')
+    .get(function (req, res) {
+        cliente.listar(req, res);
+    });
 
 
-// router.route('/filtrar__cliente')
-//     .get(function (req, res) {
-//         cliente.filtrar__cliente(req, res);
-//     });
+router.route('/filtrar__cliente')
+    .get(function (req, res) {
+        cliente.filtrar__cliente(req, res);
+    });
 
 // router.route('/desactivar_cliente')
 //     .post(function (req, res) {
