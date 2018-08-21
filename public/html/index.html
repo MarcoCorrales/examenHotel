@@ -31,9 +31,10 @@
       
                 <div class="bars">
                   <nav>
-                    <a href="#" id="btnEstudiantes" class=""><div class="link">Registrar Cliente</div></a>
-          
-                    <a href="#" id="btnEstudiantes" class=""><div class="link">Registrar Hotel</div></a>
+                    <a href="#" id="btn_registrar_cliente_administrador" class=""><div class="link">Registrar Cliente</div></a>
+                    <a href="#" id="btn_lista_cliente" class=""><div class="link">Lista Cliente</div></a>
+                    <a href="#" id="btn_hotel_admin" class=""><div class="link">Registrar Hotel</div></a>
+                    <a href="#" id="btn_lista_hotel" class=""><div class="link">Lista Hotel</div></a>
           
                   </nav>
                 </div>
@@ -88,7 +89,7 @@
               <hr>
 
                 <form action="">
-                      <button type="button" class="subirFoto" id="btn_seleccionar_ foto_cliente"> Subir foto </button>
+                      <button type="button" class="subirFoto" id="btn_seleccionar_foto_cliente"> Subir foto </button>
                       <input type="hidden" id="input_foto" value="">
                     <div class="field">
                         <input type="number" name="txt-identificacion_cliente" id="txt-identificacion_cliente" placeholder="Identificación">
@@ -144,7 +145,7 @@
                   </form>
             </section>
 
-            <section id="section_cliente_lista">
+            <section id="section_cliente_lista" class="ocultar">
                 <h2>Lista de Clientes registrados</h2>
                 <hr>
 
@@ -159,8 +160,7 @@
                     <th>Foto</th>
                     <th>Identificación</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Acciones</th>
+                    <th>Apellido</th
                   </thead>
                   <tbody>
                   </tbody>
@@ -168,21 +168,80 @@
               </section>
 
 
-            <section>
-                <h2>Titulo del Articulo</h2>
+              <section id="section_hotel_registro" class="ocultar">
+                <h2>Registre el Hotel</h2>
                 <hr>
-                 
+  
+                  <form action="">
+                        <button type="button" class="subirFoto" id="btn_seleccionar_foto_hotel"> Subir foto </button>
+                        <input type="hidden" id="input_foto" value="">
+                      <div class="field">
+                          <input type="number" name="txt-identificacion_hotel" id="txt-identificacion_hotel" placeholder="Identificación">
+                          <label for="txt-identificacion_hotel">Identificación</label>
+                        </div>
+  
+                      <div class="field">
+                        <input type="text" name="txt-nombre_hotel" id="txt-nombre_hotel" placeholder="Primer nombre">
+                        <label for="txt-nombre_hotel">Primer nombre</label>
+                      </div>
+                      <div class="field">
+                          <input type="text" name="txt-nombre2_hotel" id="txt-nombre2_hotel" placeholder="Segundo nombre">
+                          <label for="txt-nombre2_hotel">Segundo nombre</label>
+                        </div>
+                      <div class="field">
+                        <input type="text" name="txt-apellido_hotel" id="txt-apellido_hotel" placeholder="Primer apellido">
+                        <label for="txt-apellido_hotel">Primer apellido</label>
+                      </div>
+                      <div class="field">
+                          <input type="text" name="txt-apellido2_hotel" id="txt-apellido2_hotel" placeholder="Segundo apellido">
+                          <label for="txt-apellido2_hotel">Segundo apellido</label>
+                        </div>
+                        <div class="field">
+                            <input type="date" name="txt-fecha_nacimiento_hotel" id="txt-fecha_nacimiento_hotel" placeholder="Fecha de nacimiento">
+                            <label for="txt-fecha_nacimiento_hotel">Fecha de nacimiento</label>
+                          </div>
+    
+  
+                        <div class="field">
+                            <input type="text" name="txt-genero_hotel" id="txt-genero_hotel" placeholder="Género">
+                            <label for="txt-genero_hotel">Género</label>
+                          </div>
+
+                      <div class="field">
+                        <input type="password" name="txt-contrasenna_hotel" id="txt-contrasenna_hotel" placeholder="Contraseña">
+                        <label for="txt-contrasenna_hotel">Contraseña</label>
+                      </div>
+                      <div class="field">
+                        <input type="password" name="txt-contrasenna_hotel_confirmar" id="txt-contrasenna_hotel_confirmar" placeholder="Confirme su contraseña">
+                        <label for="txt-contrasenna_hotel_confirmar">Confirme su contraseña</label>
+                      </div>
+                      <button type="button" id="btn_registrar_hotel">Registrar</button>
+                    </form>
               </section>
-              <section>
-                  <h2>Titulo del Articulo</h2>
+  
+              <section id="section_hotel_lista" class="ocultar">
+                  <h2>Lista de hoteles registrados</h2>
                   <hr>
-                    
+  
+                  <div class="field filtro">
+                      <input type="text" name="txt_filtro_hotel" id="txt_filtro_hotel" placeholder="Digite el criterio de busqueda">
+                      <label for="txt_filtro_hotel">
+                        <i class="fas fa-search"></i> Buscar</label>
+                    </div>
+  
+                  <table id="tbl_hotel">
+                    <thead class="encabezados">
+                      <th>Foto</th>
+                      <th>Identificación</th>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
                 </section>
-                <section>
-                    <h2>Titulo del Articulo</h2>
-                    <hr>
-                      
-                  </section>
+  
+  
       </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
@@ -203,6 +262,9 @@
 
     <script src="../js/cliente/cliente_servicio_registrar.js"></script>
     <script src="../js/cliente/cliente_controlador_registrar.js"></script>
+
+    <script src="../js/hotel/hotel_servicio_registrar.js"></script>
+    <script src="../js/hotel/hotel_controlador_registrar.js"></script>
 
 
   </body>

@@ -8,10 +8,10 @@ if (boton_registrar_cliente != undefined) {
 
 
 
-let inputFiltro = document.querySelector('#txt_filtro_cliente');
+let input_filtro_cliente = document.querySelector('#txt_filtro_cliente');
 
-if (inputFiltro != undefined) {
-    inputFiltro.addEventListener('keyup' , filtrar_lista_cliente);
+if (input_filtro_cliente != undefined) {
+    input_filtro_cliente.addEventListener('keyup' , filtrar_lista_cliente);
 }
 
 
@@ -87,6 +87,7 @@ function obtener_datos_cliente() {
         );
  
         limpia_formulario();
+        imprimir_lista_cliente();
     }
 
 }

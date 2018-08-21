@@ -67,7 +67,7 @@ app.use( function(req, res, next) {
 
 // const admin = require('./components/admin/admin.route');
 const cliente = require('./components/cliente/cliente.route');
-// const hotel = require('./components/hotel/hotel.route');
+const hotel = require('./components/hotel/hotel.route');
 // const inicio_sesion = require('./components/inicio_sesion/inicio_sesion.route');
 
 
@@ -77,7 +77,7 @@ const cliente = require('./components/cliente/cliente.route');
 
 // app.use('/api', admin);
 app.use('/api', cliente);
-// app.use('/api', hotel);
+app.use('/api', hotel);
 // app.use('/api', inicio_sesion);
 
 
