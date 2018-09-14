@@ -40,17 +40,18 @@ function registrar_hotel(pa_info_hotel){
         dataType : 'json',
         async : false,
         data:{
-            identificacion_hotel : pa_info_hotel[0],
-			nombre_hotel : pa_info_hotel[1],
-            nombre2_hotel  : pa_info_hotel[2],
-            apellido_hotel : pa_info_hotel[3],
-            apellido2_hotel : pa_info_hotel[4],
-            fecha_nacimiento : pa_info_hotel[5],
-            genero_hotel : pa_info_hotel[6],
-            foto_perfil_hotel: pa_info_hotel[7],
-            contrasenna : pa_info_hotel[8],
-            contrasenna_confirmar : pa_info_hotel[9],
-            TipoUsuario:pa_info_hotel[10]
+            
+			nombre_hotel : pa_info_hotel[0],
+            ubicacion_hotel  : pa_info_hotel[1],
+            provincia_hotel : pa_info_hotel[2],
+            canton_hotel : pa_info_hotel[3],
+            distrito_hotel : pa_info_hotel[4],
+            direccion_exacta_hotel : pa_info_hotel[5],
+            telefono_servicio_hotel: pa_info_hotel[6],
+            correo_servicio_hotel : pa_info_hotel[7],
+            telefono_reservacion_hotel : pa_info_hotel[8],
+            correo_reservacion_hotel:pa_info_hotel[9],
+            tipo_usuario_hotel:pa_info_hotel[10]
 
         }
       });

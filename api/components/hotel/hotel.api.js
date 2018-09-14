@@ -6,17 +6,18 @@ const hotel_Model = require('./hotel.model');
 module.exports.registrar = function(req, res){
 
     let nuevo_hotel = new hotel_Model({
-        identificacion_hotel : req.body.identificacion_hotel,
+
         nombre_hotel : req.body.nombre_hotel,
-        nombre2_hotel : req.body.nombre2_hotel,
-        apellido_hotel : req.body.apellido_hotel,
-        apellido2_hotel : req.body.apellido2_hotel,
-        fecha_nacimiento : req.body.fecha_nacimiento,
-        genero_hotel : req.body.genero_hotel,
-        foto_perfil_hotel: req.body.foto_perfil_hotel,
-        contrasenna : req.body.contrasenna,
-        contrasenna_confirmar : req.body.contrasenna_confirmar,
-        TipoUsuario: 3   
+        ubicacion_hotel : req.body.ubicacion_hotel,
+        provincia_hotel : req.body.provincia_hotel,
+        canton_hotel : req.body.canton_hotel,
+        distrito_hotel : req.body.distrito_hotel,
+        direccion_exacta_hotel : req.body.direccion_exacta_hotel,
+        telefono_servicio_hotel: req.body.telefono_servicio_hotel,
+        correo_servicio_hotel : req.body.correo_servicio_hotel,
+        telefono_reservacion_hotel: req.body.telefono_reservacion_hotel,
+        correo_reservacion_hotel : req.body.correo_reservacion_hotel,
+        tipo_usuario_hotel: 0   
     });
 
     nuevo_hotel.save(function(error){
@@ -77,18 +78,7 @@ module.exports.mostrar = function(req, res){
 // module.exports.actualizar_hotel = function (req, res) {
 //     hotel_Model.findByIdAndUpdate(req.body._id,{
 
-//         identificacion_hotel : req.body.identificacion_hotel,
-//         nombre_hotel : req.body.nombre_hotel,
-//         nombre2_hotel : req.body.nombre2_hotel,
-//         apellido_hotel : req.body.apellido_hotel,
-//         apellido2_hotel : req.body.apellido2_hotel,
-//         fecha_nacimiento : req.body.fecha_nacimiento,
-//         genero_hotel : req.body.genero_hotel,
-//         foto_perfil_hotel: req.body.foto_perfil_hotel
-//         // contrasenna : req.body.contrasenna,
-//         // contrasenna_confirmar : req.body.contrasenna_confirmar,
-//         // TipoUsuario: 3,
-//         foto : req.body.foto    
+
 //     },
 
 

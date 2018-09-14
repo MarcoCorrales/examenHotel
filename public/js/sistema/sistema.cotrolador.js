@@ -18,6 +18,13 @@ boton_inicio_sesion.addEventListener('click',hide_section_login);
 let boton_register = document.querySelector('#btn_register');
 boton_register.addEventListener('click',show_section_cliente_registro);
 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * *  */
+
+let boton_register_cliente_administrador = document.querySelector('#btn_registrar_cliente_administrador');
+boton_register_cliente_administrador.addEventListener('click',show_section_cliente_registro);
+
+//* * * * * * * * * * * * * * * * * * * * * * * * * * *  */
+
 let boton_cliente_registro = document.querySelector('#btn_registrar_cliente');
 boton_cliente_registro.addEventListener('click',hide_section_cliente_registro);
 
@@ -32,7 +39,6 @@ boton_hotel_registro.addEventListener('click',hide_section_hotel_registro);
 
 let boton_lista_hotel = document.querySelector('#btn_lista_hotel');
 boton_lista_hotel.addEventListener('click',hide_section_hotel_registro);
-
 
 
 

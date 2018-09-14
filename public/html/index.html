@@ -1,273 +1,277 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>SHE</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-  crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+    crossorigin="anonymous">
   <link href='../img/sheicon.jpg' rel='shortcut icon' type='image/png'>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="../js/main.js"></script>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
 
-	<!-- <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> -->
+  <!-- <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> -->
 </head>
 
-  <body class="page-home">
+<body class="page-home">
 
-    <header id="page-header">
-        <!-- /* * * * * * * * * * * * * inicio: menu dinamico retractil * * * * * * * * * *  */ -->
-        <a href="" id="toggle-nav" class="header-button"><span class="label"></i> Menu</span></a>
-        <body class="page-home">
-            <div class="menuCont">
-                <input type="checkbox" id="check" onclick="">
-                <label for="check" id="icone"><i class="fas fa-bars"></i>
-                </label>
-      
-                <div class="bars">
-                  <nav>
-                    <a href="#" id="btn_registrar_cliente_administrador" class=""><div class="link">Registrar Cliente</div></a>
-                    <a href="#" id="btn_lista_cliente" class=""><div class="link">Lista Cliente</div></a>
-                    <a href="#" id="btn_hotel_admin" class=""><div class="link">Registrar Hotel</div></a>
-                    <a href="#" id="btn_lista_hotel" class=""><div class="link">Lista Hotel</div></a>
-          
-                  </nav>
-                </div>
-              </div>
-   <!-- /* * * * * * * * * * * * * fin: menu dinamico retractil * * * * * * * * * *  */ -->
-  
-  
+  <header id="page-header">
+    <!-- /* * * * * * * * * * * * * inicio: menu dinamico retractil * * * * * * * * * *  */ -->
+    <a href="" id="toggle-nav" class="header-button"><span class="label"></i> Menu</span></a>
 
-        <a id="btn_login" class="header-button header-button-hidden no-address" data-remote="true" href="#">Login</a>
-        <a id="btn_register" class="header-button header-button-last header-button-hidden no-address" data-remote="true" href="#">Register</a>
+    <body class="page-home">
+      <div class="menuCont">
+        <input type="checkbox" id="check" onclick="">
+        <label for="check" id="icone"><i class="fas fa-bars"></i>
+        </label>
+
+        <div class="bars">
+          <nav>
+            <a href="#" id="btn_registrar_cliente_administrador" class=""><div class="link">Registrar Cliente</div></a>
+            <a href="#" id="btn_lista_cliente" class=""><div class="link">Lista Cliente</div></a>
+            <a href="#" id="btn_hotel_admin" class=""><div class="link">Registrar Hotel</div></a>
+            <a href="#" id="btn_lista_hotel" class=""><div class="link">Lista Hotel</div></a>
+
+          </nav>
+        </div>
+      </div>
+      <!-- /* * * * * * * * * * * * * fin: menu dinamico retractil * * * * * * * * * *  */ -->
+
+
+
+      <a id="btn_login" class="header-button header-button-hidden no-address" data-remote="true" href="#">Login</a>
+      <a id="btn_register" class="header-button header-button-last header-button-hidden no-address" data-remote="true" href="#">Register</a>
 
       <div class="logo">
-          <a id="strong" href="#"> Evaluation</a>
+        <a id="strong" href="#"> Evaluation</a>
         <a id="logo-invert" href="#">the System for Hotels </a>
-        
+
       </div>
-    </header>
+  </header>
 
 
-    <div class="contenedor">
-     
-        <!-- <section id="prueba_show_hide ocultar"> -->
-          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
-          <!-- <a href="#" id="btn_hide" class=""><i class="fas fa-minus"></i></a> -->
-          <!-- <a href="#" id="btn_show" class="ocultar"><i class="fas fa-plus"></i></a> -->
-          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->          
-          <!-- <h2>Titulo del Articulo</h2> -->
-          <!-- <hr> -->
-        <!-- </section> -->
+  <div class="contenedor">
 
-        <section id="section_login" class="ocultar">
-            <h2>Inicie su sesión</h2>
-            <hr>
-            <form action="">
-                <div class="field">
-                  <input type="text" name="txt_correo_inicio" id="txt_correo_inicio" placeholder="Digite su correo electrónico">
-                  <label for="txt_correo_inicio">Email</label>
-                </div>
-                <div class="field">
-                  <input type="password" name="txt_contrasenna_inicio" id="txt_contrasenna_inicio" placeholder="Digite su contraseña">
-                  <label for="txt_contrasenna_inicio">Contraseña</label>
-                  <!-- <a class="botonolvidarcontrasenna" href="/accounts/password/reset/">¿Olvidó su contraseña?</a> -->
-                </div>
-              <button type="button" id="btn_inicio_sesion">Iniciar Sesion</button>
+    <!-- <section id="prueba_show_hide ocultar"> -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+    <!-- <a href="#" id="btn_hide" class=""><i class="fas fa-minus"></i></a> -->
+    <!-- <a href="#" id="btn_show" class="ocultar"><i class="fas fa-plus"></i></a> -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+    <!-- <h2>Titulo del Articulo</h2> -->
+    <!-- <hr> -->
+    <!-- </section> -->
 
-                
-              </form>
-        </section>
-        
-          <section id="section_cliente_registro" class="ocultar">
-              <h2>Regístrese</h2>
-              <hr>
-
-                <form action="">
-                      <button type="button" class="subirFoto" id="btn_seleccionar_foto_cliente"> Subir foto </button>
-                      <input type="hidden" id="input_foto" value="">
-                    <div class="field">
-                        <input type="number" name="txt-identificacion_cliente" id="txt-identificacion_cliente" placeholder="Identificación">
-                        <label for="txt-identificacion_cliente">Identificación</label>
-                      </div>
-
-                    <div class="field">
-                      <input type="text" name="txt-nombre_cliente" id="txt-nombre_cliente" placeholder="Primer nombre">
-                      <label for="txt-nombre_cliente">Primer nombre</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" name="txt-nombre2_cliente" id="txt-nombre2_cliente" placeholder="Segundo nombre">
-                        <label for="txt-nombre2_cliente">Segundo nombre</label>
-                      </div>
-                    <div class="field">
-                      <input type="text" name="txt-apellido_cliente" id="txt-apellido_cliente" placeholder="Primer apellido">
-                      <label for="txt-apellido_cliente">Primer apellido</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" name="txt-apellido2_cliente" id="txt-apellido2_cliente" placeholder="Segundo apellido">
-                        <label for="txt-apellido2_cliente">Segundo apellido</label>
-                      </div>
-                      <div class="field">
-                          <input type="date" name="txt-fecha_nacimiento" id="txt-fecha_nacimiento" placeholder="Fecha de nacimiento">
-                          <label for="txt-fecha_nacimiento">Fecha de nacimiento</label>
-                        </div>
-    
-                      <!-- const input_foto_perfil_cliente = document.querySelector('#btn_seleccionar_ foto_cliente'); // * * * -->
-
-                      <div class="field">
-                          <input type="text" name="txt-genero_cliente" id="txt-genero_cliente" placeholder="Género">
-                          <label for="txt-genero_cliente">Género</label>
-                        </div>
-                      <!-- <div>
-                          <fieldset>
-                            <legend>Género:</legend>
-                              <label for="rbtFemenino">Femenino</label>
-                              <input type="radio" name="rbtGenero" id="rbtFemenino" value="true">
-                
-                              <label for="rbtMasculino">Masculino</label>
-                              <input type="radio" name="rbtGenero" id="rbtMasculino" value="false">
-                          </fieldset>
-                      </div> -->
-                    <div class="field">
-                      <input type="password" name="txt-contrasenna" id="txt-contrasenna" placeholder="Contraseña">
-                      <label for="txt-contrasenna">Contraseña</label>
-                    </div>
-                    <div class="field">
-                      <input type="password" name="txt-contrasenna_confirmar" id="txt-contrasenna_confirmar" placeholder="Confirme su contraseña">
-                      <label for="txt-contrasenna_confirmar">Confirme su contraseña</label>
-                    </div>
-                    <button type="button" id="btn_registrar_cliente">Registrar</button>
-                  </form>
-            </section>
-
-            <section id="section_cliente_lista" class="ocultar">
-                <h2>Lista de Clientes registrados</h2>
-                <hr>
-
-                <div class="field filtro">
-                    <input type="text" name="txt_filtro_cliente" id="txt_filtro_cliente" placeholder="Digite el criterio de busqueda">
-                    <label for="txt_filtro_cliente">
-                      <i class="fas fa-search"></i> Buscar</label>
-                  </div>
-
-                <table id="tbl_cliente">
-                  <thead class="encabezados">
-                    <th>Foto</th>
-                    <th>Identificación</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-              </section>
+    <section id="section_login" class="ocultar">
+      <h2>Inicie su sesión</h2>
+      <hr>
+      <form action="">
+        <div class="field">
+          <input type="text" name="txt_correo_inicio" id="txt_correo_inicio" placeholder="Digite su correo electrónico">
+          <label for="txt_correo_inicio">Email</label>
+        </div>
+        <div class="field">
+          <input type="password" name="txt_contrasenna_inicio" id="txt_contrasenna_inicio" placeholder="Digite su contraseña">
+          <label for="txt_contrasenna_inicio">Contraseña</label>
+          <!-- <a class="botonolvidarcontrasenna" href="/accounts/password/reset/">¿Olvidó su contraseña?</a> -->
+        </div>
+        <button type="button" id="btn_inicio_sesion">Iniciar Sesion</button>
 
 
-              <section id="section_hotel_registro" class="ocultar">
-                <h2>Registre el Hotel</h2>
-                <hr>
-  
-                  <form action="">
-                        <button type="button" class="subirFoto" id="btn_seleccionar_foto_hotel"> Subir foto </button>
-                        <input type="hidden" id="input_foto" value="">
-                      <div class="field">
-                          <input type="number" name="txt-identificacion_hotel" id="txt-identificacion_hotel" placeholder="Identificación">
-                          <label for="txt-identificacion_hotel">Identificación</label>
-                        </div>
-  
-                      <div class="field">
-                        <input type="text" name="txt-nombre_hotel" id="txt-nombre_hotel" placeholder="Primer nombre">
-                        <label for="txt-nombre_hotel">Primer nombre</label>
-                      </div>
-                      <div class="field">
-                          <input type="text" name="txt-nombre2_hotel" id="txt-nombre2_hotel" placeholder="Segundo nombre">
-                          <label for="txt-nombre2_hotel">Segundo nombre</label>
-                        </div>
-                      <div class="field">
-                        <input type="text" name="txt-apellido_hotel" id="txt-apellido_hotel" placeholder="Primer apellido">
-                        <label for="txt-apellido_hotel">Primer apellido</label>
-                      </div>
-                      <div class="field">
-                          <input type="text" name="txt-apellido2_hotel" id="txt-apellido2_hotel" placeholder="Segundo apellido">
-                          <label for="txt-apellido2_hotel">Segundo apellido</label>
-                        </div>
-                        <div class="field">
-                            <input type="date" name="txt-fecha_nacimiento_hotel" id="txt-fecha_nacimiento_hotel" placeholder="Fecha de nacimiento">
-                            <label for="txt-fecha_nacimiento_hotel">Fecha de nacimiento</label>
-                          </div>
-    
-  
-                        <div class="field">
-                            <input type="text" name="txt-genero_hotel" id="txt-genero_hotel" placeholder="Género">
-                            <label for="txt-genero_hotel">Género</label>
-                          </div>
+      </form>
+    </section>
 
-                      <div class="field">
-                        <input type="password" name="txt-contrasenna_hotel" id="txt-contrasenna_hotel" placeholder="Contraseña">
-                        <label for="txt-contrasenna_hotel">Contraseña</label>
-                      </div>
-                      <div class="field">
-                        <input type="password" name="txt-contrasenna_hotel_confirmar" id="txt-contrasenna_hotel_confirmar" placeholder="Confirme su contraseña">
-                        <label for="txt-contrasenna_hotel_confirmar">Confirme su contraseña</label>
-                      </div>
-                      <button type="button" id="btn_registrar_hotel">Registrar</button>
-                    </form>
-              </section>
-  
-              <section id="section_hotel_lista" class="ocultar">
-                  <h2>Lista de hoteles registrados</h2>
-                  <hr>
-  
-                  <div class="field filtro">
-                      <input type="text" name="txt_filtro_hotel" id="txt_filtro_hotel" placeholder="Digite el criterio de busqueda">
-                      <label for="txt_filtro_hotel">
-                        <i class="fas fa-search"></i> Buscar</label>
-                    </div>
-  
-                  <table id="tbl_hotel">
-                    <thead class="encabezados">
-                      <th>Foto</th>
-                      <th>Identificación</th>
-                      <th>Nombre</th>
-                      <th>Apellido</th>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </section>
-  
-  
+    <section id="section_cliente_registro" class="ocultar">
+      <h2>Regístrese</h2>
+      <hr>
+
+      <form action="">
+        <button type="button" class="subirFoto" id="btn_seleccionar_foto_cliente"> Subir foto </button>
+        <input type="hidden" id="input_foto" value="">
+        <div class="field">
+          <input type="number" name="txt-identificacion_cliente" id="txt-identificacion_cliente" placeholder="Identificación">
+          <label for="txt-identificacion_cliente">Identificación</label>
+        </div>
+
+        <div class="field">
+          <input type="text" name="txt-nombre_cliente" id="txt-nombre_cliente" placeholder="Primer nombre">
+          <label for="txt-nombre_cliente">Primer nombre</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt-nombre2_cliente" id="txt-nombre2_cliente" placeholder="Segundo nombre">
+          <label for="txt-nombre2_cliente">Segundo nombre</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt-apellido_cliente" id="txt-apellido_cliente" placeholder="Primer apellido">
+          <label for="txt-apellido_cliente">Primer apellido</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt-apellido2_cliente" id="txt-apellido2_cliente" placeholder="Segundo apellido">
+          <label for="txt-apellido2_cliente">Segundo apellido</label>
+        </div>
+        <div class="field">
+          <input type="date" name="txt-fecha_nacimiento" id="txt-fecha_nacimiento" placeholder="Fecha de nacimiento">
+          <label for="txt-fecha_nacimiento">Fecha de nacimiento</label>
+        </div>
+
+        <!-- const input_foto_perfil_cliente = document.querySelector('#btn_seleccionar_ foto_cliente'); // * * * -->
+
+        <div class="field">
+          <input type="text" name="txt-genero_cliente" id="txt-genero_cliente" placeholder="Género">
+          <label for="txt-genero_cliente">Género</label>
+        </div>
+        <!-- <div>
+<fieldset>
+<legend>Género:</legend>
+<label for="rbtFemenino">Femenino</label>
+<input type="radio" name="rbtGenero" id="rbtFemenino" value="true">
+
+<label for="rbtMasculino">Masculino</label>
+<input type="radio" name="rbtGenero" id="rbtMasculino" value="false">
+</fieldset>
+</div> -->
+        <div class="field">
+          <input type="password" name="txt-contrasenna" id="txt-contrasenna" placeholder="Contraseña">
+          <label for="txt-contrasenna">Contraseña</label>
+        </div>
+        <div class="field">
+          <input type="password" name="txt-contrasenna_confirmar" id="txt-contrasenna_confirmar" placeholder="Confirme su contraseña">
+          <label for="txt-contrasenna_confirmar">Confirme su contraseña</label>
+        </div>
+        <button type="button" id="btn_registrar_cliente">Registrar</button>
+      </form>
+    </section>
+
+    <section id="section_cliente_lista" class="ocultar">
+      <h2>Lista de Clientes registrados</h2>
+      <hr>
+
+      <div class="field filtro">
+        <input type="text" name="txt_filtro_cliente" id="txt_filtro_cliente" placeholder="Digite el criterio de busqueda">
+        <label for="txt_filtro_cliente">
+          <i class="fas fa-search"></i> Buscar</label>
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-      <!-- <script src="../../js/jquery-3.3.1.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
+      <table id="tbl_cliente">
+        <thead class="encabezados">
+          <th>Foto</th>
+          <th>Identificación</th>
+          <th>Nombre</th>
+          <th>Apellido</th </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </section>
 
-      <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
-      <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 
-      <script src="../js/servicio_imagen.js"></script>
+    <section id="section_hotel_registro" class="ocultar">
+      <h2>Registre el Hotel</h2>
+      <hr>
 
-    <script src="../js/sistema/sistema.servicio.js"></script>
-    <script src="../js/sistema/sistema.cotrolador.js"></script>
+      <form action="">
+        <button type="button" class="subirFoto" id="btn_seleccionar_foto_hotel"> Subir foto </button>
+        <input type="hidden" id="input_foto" value="">
 
-    <script src="../js/cliente/cliente_servicio_registrar.js"></script>
-    <script src="../js/cliente/cliente_controlador_registrar.js"></script>
+        <div class="field">
+          <input type="text" name="txt_nombre_hotel" id="txt_nombre_hotel" placeholder="Nombre del Hotel">
+          <label for="txt_nombre_hotel">Nombre del Hotel</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_ubicacion_hotel" id="txt_ubicacion_hotel" placeholder="Ubicación">
+          <label for="txt_ubicacion_hotel">Ubicación</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_provincia_hotel" id="txt_provincia_hotel" placeholder="Provincia">
+          <label for="txt_provincia_hotel">Provincia</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_canton_hotel" id="txt_canton_hotel" placeholder="Cantón">
+          <label for="txt_canton_hotel">Cantón</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_distrito_hotel" id="txt_distrito_hotel" placeholder="Distrito">
+          <label for="txt_distrito_hotel">Distrito</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_direccion_exacta_hotel" id="txt_direccion_exacta_hotel" placeholder="Dirección exacta">
+          <label for="txt_direccion_exacta_hotel">Dirección exacta</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_telefono_servicio_hotel" id="txt_telefono_servicio_hotel" placeholder="Teléfono de servicio al cliente">
+          <label for="txt_telefono_servicio_hotel">Teléfono de servicio al cliente</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_correo_servicio_hotel" id="txt_correo_servicio_hotel" placeholder="Correo de servicio al cliente">
+          <label for="txt_correo_servicio_hotel">Correo de servicio al cliente</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_telefono_reservacion_hotel" id="txt_telefono_reservacion_hotel" placeholder="Teléfono de reservación">
+          <label for="txt_telefono_reservacion_hotel">Teléfono de reservación</label>
+        </div>
+        <div class="field">
+          <input type="text" name="txt_correo_reservacion_hotel" id="txt_correo_reservacion_hotel" placeholder="Correo de reservación">
+          <label for="txt_correo_reservacion_hotel">Correo de reservación</label>
+        </div>
 
-    <script src="../js/hotel/hotel_servicio_registrar.js"></script>
-    <script src="../js/hotel/hotel_controlador_registrar.js"></script>
+        <button type="button" id="btn_registrar_hotel">Registrar</button>
+      </form>
+    </section>
+
+    <section id="section_hotel_lista" class="ocultar">
+      <h2>Lista de hoteles registrados</h2>
+      <hr>
+
+      <div class="field filtro">
+        <input type="text" name="txt_filtro_hotel" id="txt_filtro_hotel" placeholder="Digite el criterio de busqueda">
+        <label for="txt_filtro_hotel">
+          <i class="fas fa-search"></i> Buscar</label>
+      </div>
+
+      <table id="tbl_hotel">
+        <thead class="encabezados">
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Provincia</th>
+          <th>Teléfono Servicio al Cliente</th>
+          <th>Teléfono reservación</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- <script src="../../js/jquery-3.3.1.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+  <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+  <script src="../js/servicio_imagen.js"></script>
+
+  <script src="../js/sistema/sistema.servicio.js"></script>
+  <script src="../js/sistema/sistema.cotrolador.js"></script>
+
+  <script src="../js/cliente/cliente_servicio_registrar.js"></script>
+  <script src="../js/cliente/cliente_controlador_registrar.js"></script>
+
+  <script src="../js/hotel/hotel_servicio_registrar.js"></script>
+  <script src="../js/hotel/hotel_controlador_registrar.js"></script>
 
 
   </body>
+
 </html>
 
 

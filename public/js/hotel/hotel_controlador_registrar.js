@@ -6,26 +6,22 @@ if (boton_registrar_hotel != undefined) {
     boton_registrar_hotel.addEventListener('click', obtener_datos_hotel);
 }
 
-
-
 let input_filtro_hotel = document.querySelector('#txt_filtro_hotel');
 
 if (input_filtro_hotel != undefined) {
     input_filtro_hotel.addEventListener('keyup' , filtrar_lista_hotel);
 }
 
-
-
-const input_identificacion_hotel = document.querySelector('#txt-identificacion_hotel');
-const input_nombre_hotel = document.querySelector('#txt-nombre_hotel');
-const input_nombre2_hotel = document.querySelector('#txt-nombre2_hotel');
-const input_apellido_hotel = document.querySelector('#txt-apellido_hotel');
-const input_apellido2_hotel = document.querySelector('#txt-apellido2_hotel');
-const input_fecha_nacimiento_hotel = document.querySelector('#txt-fecha_nacimiento_hotel');
-const input_genero_hotel = document.querySelector('#txt-genero_hotel');
-const input_foto_perfil_hotel = document.querySelector('#input_foto'); // * * *
-const input_contrasenna_hotel = document.querySelector('#txt-contrasenna_hotel');
-const input_contrasenna_hotel_confirmar = document.querySelector('#txt-contrasenna_hotel_confirmar');
+const input_nombre_hotel = document.querySelector('#txt_nombre_hotel');
+const input_ubicacion_hotel = document.querySelector('#txt_ubicacion_hotel');
+const input_provincia_hotel = document.querySelector('#txt_provincia_hotel');
+const input_canton_hotel = document.querySelector('#txt_canton_hotel');
+const input_distrito_hotel = document.querySelector('#txt_distrito_hotel');
+const input_direccion_exacta_hotel = document.querySelector('#txt_direccion_exacta_hotel');
+const input_telefono_servicio_hotel = document.querySelector('#txt_telefono_servicio_hotel');
+const input_correo_servicio_hotel = document.querySelector('#txt_correo_servicio_hotel');
+const input_telefono_reservacion_hotel = document.querySelector('#txt_telefono_reservacion_hotel');
+const input_correo_reservacion_hotel = document.querySelector('#txt_correo_reservacion_hotel');
 
 
 // function elm(id) {                                           //* * *
@@ -42,23 +38,20 @@ function obtener_datos_hotel() {
     let info_hotel = [];
     let bError = false;
 
-    let sidentificacion_hotel = Number(input_identificacion_hotel.value);
+
     let snombre_hotel = input_nombre_hotel.value;
-    let snombre2_hotel = input_nombre2_hotel.value;
-    let sapellido_hotel = input_apellido_hotel.value;
-    let sapellido2_hotel = input_apellido2_hotel.value;
-    let sfecha_nacimiento_hotel = input_fecha_nacimiento_hotel.value;
-    let sgenero_hotel = input_genero_hotel.value;
-    let sfoto_perfil_hotel = input_foto_perfil_hotel.value;    
-    // let sdesactivado = false;
-    let scontrasenna_hotel = input_contrasenna_hotel.value;
-    let scontrasenna_hotel_confirmar = input_contrasenna_hotel_confirmar.value;
-    // let TipoUsuario =
+    let subicacion_hotel = input_ubicacion_hotel.value;
+    let sprovincia_hotel = input_provincia_hotel.value;
+    let scanton_hotel = input_canton_hotel.value;
+    let sdistrito_hotel = input_distrito_hotel.value;
+    let sdireccion_exacta_hotel = input_direccion_exacta_hotel.value;
+    let stelefono_servicio_hotel = input_telefono_servicio_hotel.value;
+    let scorreo_servicio_hotel = input_correo_servicio_hotel.value;
+    let stelefono_reservacion_hotel = input_telefono_reservacion_hotel.value;
+    let scorreo_reservacion_hotel = input_correo_reservacion_hotel.value;
 
 
-
-
-    info_hotel.push(sidentificacion_hotel, snombre_hotel, snombre2_hotel, sapellido_hotel, sapellido2_hotel, sfecha_nacimiento_hotel, sgenero_hotel, sfoto_perfil_hotel, scontrasenna_hotel, scontrasenna_hotel_confirmar);
+    info_hotel.push(snombre_hotel, subicacion_hotel, sprovincia_hotel, scanton_hotel, sdistrito_hotel, sdireccion_exacta_hotel, stelefono_servicio_hotel, scorreo_servicio_hotel, stelefono_reservacion_hotel, scorreo_reservacion_hotel);
 
 
     bError = validar_hotel();
@@ -92,109 +85,6 @@ function obtener_datos_hotel() {
 
 }
 
-
-function validar_hotel() {
-
-    let bError = false;
-
-    let regexSoloLetras = /^[a-z A-ZáéíóúÁÉÍÓÚñÑ]+$/;
-    let regexSoloNumeros = /^[0-9]+$/;                         // * * * 
-
-
-    //Validación de la identificacion_hotel 
-    if (input_identificacion_hotel.value == '') {
-        input_identificacion_hotel.classList.add('error-input');
-        bError = true;
-    } else {
-        input_identificacion_hotel.classList.remove('error-input');
-    }
-
-    //Validación del nombre_hotel 
-    if (input_nombre_hotel.value == '' || (regexSoloLetras.test(input_nombre_hotel.value) == false)) {
-        input_nombre_hotel.classList.add('error-input');
-        bError = true;
-    } else {
-        input_nombre_hotel.classList.remove('error-input');
-    }
-
-    //Validación del apellido_hotel 
-    if (input_apellido_hotel.value == '' || (regexSoloLetras.test(input_apellido_hotel.value) == false)) {
-        input_apellido_hotel.classList.add('error-input');
-        bError = true;
-    } else {
-        input_apellido_hotel.classList.remove('error-input');
-    }
-
- 
-    //Validación de la fecha nacimiento 
-    if (input_fecha_nacimiento_hotel.value == '') {
-        input_fecha_nacimiento_hotel.classList.add('error-input');
-        bError = true;
-    } else {
-        input_fecha_nacimiento_hotel.classList.remove('error-input');
-    }
-
-    //Validación genero del hotel
-    if (input_genero_hotel.value == '') {
-        input_genero_hotel.classList.add('error-input');
-        bError = true;
-    } else {
-        input_genero_hotel.classList.remove('error-input');
-    }
-
-    return bError;
-}
-
-
-function limpia_formulario() {
-
-    input_identificacion_hotel.value =''; 
-    input_nombre_hotel.value ='';
-    input_nombre2_hotel.value ='';
-    input_apellido_hotel.value =''; 
-    input_apellido2_hotel.value =''; 
-    input_fecha_nacimiento_hotel.value ='';
-    input_genero_hotel.value ='';
-    input_foto_perfil_hotel.value ='';    // * * *    
-    input_contrasenna_hotel.value ='';   
-    input_contrasenna_hotel_confirmar.value ='';    
-}
-
-function imprimir_lista_hotel(){
-    let lista_hotel = obtener_lista_hotel();
-
-    let tbody = document.querySelector('#tbl_hotel tbody');
-    tbody.innerHTML = '';
-
-    for(let i = 0; i < lista_hotel.length; i++){
-        let fila = tbody.insertRow();
-
-        let cFoto = fila.insertCell();
-        let cIdentificacion = fila.insertCell();
-        let cNombre = fila.insertCell();
-        let cApellido = fila.insertCell();
-        
- 
-
-        cIdentificacion.innerHTML = lista_hotel[i].identificacion_hotel;
-        cNombre.innerHTML = lista_hotel[i].nombre_hotel;
-        cApellido.innerHTML = lista_hotel[i].apellido_hotel;
-        
-
-
-        // let foto = document.createElement('img');
-        // let fotoUrl = '';
-        // if(lista_hotel[i].foto_perfil_hotel){
-        //     fotoUrl = (lista_hotel[i].foto_perfil_hotel).replace('file', 'http'); 
-        // }
-        // foto.src = fotoUrl;
-
-        // cFoto.appendChild(foto_perfil_hotel);
-
-    }
-
-};
-
 function filtrar_lista_hotel(){
     let filtro = $("#txt_filtro_hotel").val();
     let lista_hotel = obtener_lista_hotel();
@@ -216,26 +106,67 @@ function filtrar_lista_hotel(){
     for(let i = 0; i < lista_filtrada_hotel.length; i++){
         let fila = tbody.insertRow();
 
-        let cFoto = fila.insertCell();
-        let cIdentificacion = fila.insertCell();
-        let cNombre = fila.insertCell();
-        let cApellido = fila.insertCell();
+        let cfoto_hotel = fila.insertCell();
+        let cnombre = fila.insertCell();
+        // let cubicacion_hotel = fila.insertCell();
+        let cprovincia_hotel = fila.insertCell();
+        // let ccanton_hotel = fila.insertCell();
+        // let cdistrito_hotel = fila.insertCell();
+        // let cdireccion_exacta_hotel = fila.insertCell();
+        let ctelefono_servicio_hotel = fila.insertCell();
+        // let ccorreo_servicio_hotel = fila.insertCell();
+        let ctelefono_reservacion_hotel = fila.insertCell();
+        // let ccorreo_reservacion_hotel = fila.insertCell();
+        
  
+        // cfoto_hotel.innerHTML = lista_hotel[i].foto_hotel;
+        cnombre.innerHTML = lista_hotel[i].nombre_hotel;
+        // cubicacion_hotel.innerHTML = lista_hotel[i].ubicacion_hotel;
+        cprovincia_hotel.innerHTML = lista_hotel[i].provincia_hotel;
+        // ccanton_hotel.innerHTML = lista_hotel[i].canton_hotel;
+        // cdistrito_hotel.innerHTML = lista_hotel[i].distrito_hotel;
+        // cdireccion_exacta_hotel.innerHTML = lista_hotel[i].direccion_exacta_hotel;
+        ctelefono_servicio_hotel.innerHTML= lista_hotel[i].telefono_servicio_hotel;
+        // ccorreo_servicio_hotel.innerHTML= lista_hotel[i].telefono_reservacion_hotel;
+        ctelefono_reservacion_hotel.innerHTML = lista_hotel[i].telefono_reservacion_hotel;
+        // ccorreo_reservacion_hotel.innerHTML = lista_hotel[i].correo_reservacion_hotel;
 
-        cIdentificacion.innerHTML = lista_hotel[i].identificacion_hotel;
-        cNombre.innerHTML = lista_hotel[i].nombre_hotel;
-        cApellido.innerHTML = lista_hotel[i].apellido_hotel;
+    }
 
+};
+function imprimir_lista_hotel(){
+    let lista_hotel = obtener_lista_hotel();
+
+    let tbody = document.querySelector('#tbl_hotel tbody');
+    tbody.innerHTML = '';
+
+    for(let i = 0; i < lista_hotel.length; i++){
+        let fila = tbody.insertRow();
+
+        let cfoto_hotel = fila.insertCell();
+        let cnombre = fila.insertCell();
+        // let cubicacion_hotel = fila.insertCell();
+        let cprovincia_hotel = fila.insertCell();
+        // let ccanton_hotel = fila.insertCell();
+        // let cdistrito_hotel = fila.insertCell();
+        // let cdireccion_exacta_hotel = fila.insertCell();
+        let ctelefono_servicio_hotel = fila.insertCell();
+        // let ccorreo_servicio_hotel = fila.insertCell();
+        let ctelefono_reservacion_hotel = fila.insertCell();
+        // let ccorreo_reservacion_hotel = fila.insertCell();
         
-        // let foto = document.createElement('img');
-        // let fotoUrl = '';
-        // if(lista_hotel[i].foto_perfil_hotel){
-        //     fotoUrl = (lista_hotel[i].foto_perfil_hotel).replace('file', 'http'); 
-        // }
-        // foto.src = fotoUrl;
-
-        // cFoto.appendChild(foto_perfil_hotel);
-        
+ 
+        // cfoto_hotel.innerHTML = lista_hotel[i].foto_hotel;
+        cnombre.innerHTML = lista_hotel[i].nombre_hotel;
+        // cubicacion_hotel.innerHTML = lista_hotel[i].ubicacion_hotel;
+        cprovincia_hotel.innerHTML = lista_hotel[i].provincia_hotel;
+        // ccanton_hotel.innerHTML = lista_hotel[i].canton_hotel;
+        // cdistrito_hotel.innerHTML = lista_hotel[i].distrito_hotel;
+        // cdireccion_exacta_hotel.innerHTML = lista_hotel[i].direccion_exacta_hotel;
+        ctelefono_servicio_hotel.innerHTML= lista_hotel[i].telefono_servicio_hotel;
+        // ccorreo_servicio_hotel.innerHTML= lista_hotel[i].telefono_reservacion_hotel;
+        ctelefono_reservacion_hotel.innerHTML = lista_hotel[i].telefono_reservacion_hotel;
+        // ccorreo_reservacion_hotel.innerHTML = lista_hotel[i].correo_reservacion_hotel;
 
     }
 
@@ -244,3 +175,95 @@ function filtrar_lista_hotel(){
 $(document).ready(function() {
     imprimir_lista_hotel();
  });
+
+
+
+function validar_hotel() {
+
+    let bError = false;
+
+    let regexSoloLetras = /^[a-z A-ZáéíóúÁÉÍÓÚñÑ]+$/;
+    let regexSoloNumeros = /^[0-9]+$/;                        
+
+
+    if (input_nombre_hotel.value == '' || (regexSoloLetras.test(input_nombre_hotel.value) == false)) {
+        input_nombre_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_nombre_hotel.classList.remove('error-input');
+    }
+
+
+    if (input_provincia_hotel.value == '' || (regexSoloLetras.test(input_provincia_hotel.value) == false)) {
+        input_provincia_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_provincia_hotel.classList.remove('error-input');
+    }
+
+    if (input_canton_hotel.value == '' || (regexSoloLetras.test(input_canton_hotel.value) == false)) {
+        input_canton_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_canton_hotel.classList.remove('error-input');
+    }
+
+    if (input_distrito_hotel.value == '' || (regexSoloLetras.test(input_distrito_hotel.value) == false)) {
+        input_distrito_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_distrito_hotel.classList.remove('error-input');
+    }
+
+    if (input_direccion_exacta_hotel.value == '') {
+        input_direccion_exacta_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_direccion_exacta_hotel.classList.remove('error-input');
+    }
+
+    if (input_telefono_servicio_hotel.value == '') {
+        input_telefono_servicio_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_telefono_servicio_hotel.classList.remove('error-input');
+    }
+    if (input_correo_servicio_hotel.value == '') {
+        input_correo_servicio_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_correo_servicio_hotel.classList.remove('error-input');
+    }
+
+    if (input_telefono_reservacion_hotel.value == '') {
+        input_telefono_reservacion_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_telefono_reservacion_hotel.classList.remove('error-input');
+    }
+    if (input_correo_reservacion_hotel.value == '') {
+        input_correo_reservacion_hotel.classList.add('error-input');
+        bError = true;
+    } else {
+        input_correo_reservacion_hotel.classList.remove('error-input');
+    }
+
+    return bError;
+}
+
+
+function limpia_formulario() {
+
+    input_nombre_hotel.value ='';
+    input_ubicacion_hotel.value ='';
+    input_provincia_hotel.value =''; 
+    input_canton_hotel.value =''; 
+    input_distrito_hotel.value ='';
+    input_direccion_exacta_hotel.value ='';
+    input_telefono_servicio_hotel.value ='';   
+    input_correo_servicio_hotel.value ='';   
+    input_telefono_reservacion_hotel.value ='';   
+    input_correo_reservacion_hotel.value ='';    
+
+}
+
